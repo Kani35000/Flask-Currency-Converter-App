@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} Kani Forex Converter {% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+<p class="lead">Make your conversions</p>
+<small class="text-success">From Mon 00:01 - Fri 23:59 only</small>
+</div>
+
+    <div class="container w-50">
+        <form method="POST">
+        
+            <form method="POST">
+              <div class="container">
+              {{form.hidden_tag()}}
+          
+              
+              <p>
+                  {{form.converting_from.label(class_="")}}
+                  {{ form.converting_from(class_="form-control", placeholder="USD") }}
+        
+                  {{form.converting_to.label(class_="")}}
+                  {{ form.converting_to(class_="form-control", placeholder="EUR") }}
+                  
+                  {{form.amount.label(class_="")}}
+                  {{ form.amount(class_="form-control") }}
+                  
+                  {% for error in form.errors %}
+                  <span class="form-text text-danger">{{ error }}</span>
+                  {% endfor %}
+              </p>
+              
+              <button class="btn btn-success" type="submit">See Conversion</button>
+              <p class="mt-5">Your result is {{currency_symbol}}{{result}}</p>
+              <input type="text" placeholder="{{currency_symbol}}{{result}}" class="form-control">
+              
+          </form>
+          
+          
+
+    </div>
+    {% endblock %}

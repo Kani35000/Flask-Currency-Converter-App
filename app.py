@@ -47,6 +47,13 @@ def convert():
                 flash(f"{converting_from} is not a valid currency code", 'danger')                                        
                 flash(f"{converting_to} is not a valid currency code", 'danger')
                 return redirect('/')
+        if find_currency_code(converting_to)!=converting_to and isamount(amount)== False:
+                flash(f"{converting_to} is not a valid currency code", 'danger')                                        
+                flash("Amount is not valid", 'danger')
+        if find_currency_code(converting_from)!=converting_from and isamount(amount)== False:
+                flash(f"{converting_from} is not a valid currency code", 'danger')                                        
+                flash("Amount is not valid", 'danger')
+                return redirect('/')
         if find_currency_code(converting_from)!=converting_from:   
             flash(f"{converting_from} is not a valid currency code", 'danger')
             return redirect('/')

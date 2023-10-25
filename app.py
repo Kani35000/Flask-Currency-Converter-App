@@ -4,6 +4,7 @@ from forms import ConversionForm, CryptoForm
 from forex_python.converter import CurrencyRates, CurrencyCodes
 from valid_form import find_currency_code, isamount
 from forex_python.bitcoin import BtcConverter
+import secrets
 
 app= Flask(__name__)
 
@@ -69,7 +70,11 @@ def convert():
     return render_template('index.html', form=form)
             
 
-        
+@app.route('/', methods=['GET', 'POST'])
+def todays_market():
+    """This displays todays market via api"""
+    
+
 # @app.route('/crypto', methods=['GET', 'POST'])
 # def convert_crypto():
 #     """convert crypto-currencies"""

@@ -11,7 +11,7 @@ app= Flask(__name__)
 
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = ''
-
+app.config['FLASK_ENV']='production'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True 
 app.config['SECRET_KEY']='TDjakes35'

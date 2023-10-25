@@ -17,7 +17,7 @@ app.config['SQLALCHEMY_ECHO'] = True
 app.config['SECRET_KEY']='TDjakes35'
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 debug = DebugToolbarExtension(app)
-
+export PATH=$PATH:/usr/local/python3/bin
 # connect_db(app)
 
 

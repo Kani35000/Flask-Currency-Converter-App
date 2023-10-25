@@ -70,9 +70,9 @@ def convert():
     return render_template('index.html', form=form)
             
 
-@app.route('/', methods=['GET', 'POST'])
-def todays_market():
-    """This displays todays market via api"""
+# @app.route('/', methods=['GET', 'POST'])
+# def todays_market():
+#     """This displays todays market via api"""
     
 
 # @app.route('/crypto', methods=['GET', 'POST'])

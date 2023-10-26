@@ -137,7 +137,7 @@ service-identity==16.0.0
 simplejson==3.18.3
 six==1.16.0
 sniffio==1.2.0
-sos==4.4
+
 SQLAlchemy==1.4.46
 
 ssh-import-id==5.7
